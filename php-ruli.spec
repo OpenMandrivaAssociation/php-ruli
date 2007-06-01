@@ -6,7 +6,7 @@
 Summary:	PHP binding for RULI
 Name:		php-%{modname}
 Version:	0.36
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		Development/PHP
 URL:		http://savannah.nongnu.org/projects/ruli/
