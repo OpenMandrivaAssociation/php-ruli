@@ -6,7 +6,7 @@
 Summary:	PHP binding for RULI
 Name:		php-%{modname}
 Version:	0.36
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL
 Group:		Development/PHP
 URL:		http://savannah.nongnu.org/projects/ruli/
@@ -32,15 +32,7 @@ mv php/ruli/* .
 mv php/README .
 
 %build
-export CFLAGS="%{optflags}"
-export CXXFLAGS="%{optflags}"
-export FFLAGS="%{optflags}"
-
-%if %mdkversion >= 200710
-export CFLAGS="$CFLAGS -fstack-protector"
-export CXXFLAGS="$CXXFLAGS -fstack-protector"
-export FFLAGS="$FFLAGS -fstack-protector"
-%endif
+%serverbuild
 
 phpize
 %configure2_5x --with-libdir=%{_lib} \
