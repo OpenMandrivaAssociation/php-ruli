@@ -6,7 +6,7 @@
 Summary:	PHP binding for RULI
 Name:		php-%{modname}
 Version:	0.36
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPL
 Group:		Development/PHP
 URL:		http://savannah.nongnu.org/projects/ruli/
@@ -52,6 +52,18 @@ install -m755 %{soname} %{buildroot}%{_libdir}/php/extensions/
 cat > %{buildroot}%{_sysconfdir}/php.d/%{inifile} << EOF
 extension = %{soname}
 EOF
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
