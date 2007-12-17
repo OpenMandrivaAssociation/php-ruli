@@ -14,7 +14,6 @@ Source0:	php-ruli-%{version}.tar.bz2
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	ruli-devel >= %{version}
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 PHP binding for RULI
