@@ -3,7 +3,7 @@
 %define soname %{modname}.so
 %define inifile A28_%{modname}.ini
 
-Summary:	PHP binding for RULI
+Summary:	PHP binding for RULI, an asynchronous DNS stub resolver
 Name:		php-%{modname}
 Version:	0.36
 Release:	%mkrel 11
