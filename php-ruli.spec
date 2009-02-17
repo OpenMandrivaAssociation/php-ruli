@@ -6,7 +6,7 @@
 Summary:	PHP binding for RULI, an asynchronous DNS stub resolver
 Name:		php-%{modname}
 Version:	0.36
-Release:	%mkrel 13
+Release:	%mkrel 14
 License:	GPL
 Group:		Development/PHP
 URL:		http://savannah.nongnu.org/projects/ruli/
