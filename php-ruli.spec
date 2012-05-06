@@ -11,6 +11,7 @@ License:	GPL
 Group:		Development/PHP
 URL:		http://savannah.nongnu.org/projects/ruli/
 Source0:	php-ruli-%{version}.tar.bz2
+Patch0:		ruli-0.36-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	ruli-devel >= %{version}
 Epoch:		1
@@ -28,6 +29,7 @@ standards.
 %prep
 
 %setup -q -n ruli-%{version}
+%patch0 -p0
 mv php/ruli/* .
 mv php/README .
 
