@@ -1,0 +1,11 @@
+--- php/ruli/php_ruli.c	2004-10-25 07:47:16.000000000 +0200
++++ php/ruli/php_ruli.c.oden	2012-05-06 11:28:00.589251779 +0200
+@@ -24,7 +24,7 @@ static int le_ruli;
+  *
+  * Every user visible function must have an entry in ruli_functions[].
+  */
+-function_entry ruli_functions[] = {
++zend_function_entry ruli_functions[] = {
+ 	PHP_FE(confirm_ruli_compiled,	NULL)		/* For testing, remove later. */
+ 	PHP_FE(ruli_sync_query,	NULL)
+ 	PHP_FE(ruli_sync_smtp_query, NULL)
