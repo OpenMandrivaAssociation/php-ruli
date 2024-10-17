@@ -9,7 +9,7 @@ Version:	0.36
 Release:	31
 License:	GPL
 Group:		Development/PHP
-URL:		http://savannah.nongnu.org/projects/ruli/
+URL:		https://savannah.nongnu.org/projects/ruli/
 Source0:	php-ruli-%{version}.tar.bz2
 Patch0:		ruli-0.36-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
